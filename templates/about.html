@@ -3,19 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <title>My Website - About</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/app.css')}}"
+    />
   </head>
   <body>
-    <h1>Brittany Thomas</h1>
-    <p>
-      My name is Brittany Thomas. I am currently pursuing a major in computer
-      science and a minor in management studies at the University of the West
-      Indies. My educational journey reflects my passion for technology and my
-      desire to develop strong leadership skills. I am constantly seeking
-      opportunities to learn new things and broaden my horizons. Exploring new
-      places and immersing myself in different experiences is where I find
-      inspiration and growth. Those who know me would describe me as highly
-      motivated and driven to achieve my goals, consistently striving for
-      excellence in all aspects of my life.
-    </p>
+    <header>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
+    <div class="main-content">
+      <h1>Brittany Thomas</h1>
+
+      <div class="content">
+        <p>
+          My name is Brittany Thomas. I am currently pursuing a major in
+          computer science and a minor in management studies at the University
+          of the West Indies. My educational journey reflects my passion for
+          technology and my desire to develop strong leadership skills. I am
+          constantly seeking opportunities to learn new things and broaden my
+          horizons. Exploring new places and immersing myself in different
+          experiences is where I find inspiration and growth. Those who know me
+          would describe me as highly motivated and driven to achieve my goals,
+          consistently striving for excellence in all aspects of my life.
+        </p>
+
+        <img
+          src="{{ url_for('static', filename = 'professional_photo.png') }}"
+          alt="Professional Portrait of a black girl with an afro"
+        />
+      </div>
+      <footer>
+        <p>Copyright &copy; 2024, Brittany Thomas</p>
+      </footer>
+    </div>
   </body>
 </html>
